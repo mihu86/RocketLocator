@@ -244,6 +244,14 @@ public class MainActivity extends FragmentActivity implements
                 beepEnabled = isChecked;
             }
         });
+        ToggleButton chkGpsBeep = (ToggleButton) findViewById(R.id.chkGpsBeep);
+        chkGpsBeep.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView,
+                                         boolean isChecked) {
+                Sounds.pulse_enabled = isChecked;
+            }
+        });
 
         accelAverage = new ExponentialAverage(0.2f);
         magnetAverage = new ExponentialAverage(0.5f);

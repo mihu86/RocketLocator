@@ -26,6 +26,7 @@ public class Sounds {
 	public static MediaPlayer gps_disconnected;
 	public static MediaPlayer pulse;
 	public static MediaPlayer radar_beep;
+	public static boolean pulse_enabled;
 	
 	public static void init(MainActivity mainActivity){
 		mainActivity.setVolumeControlStream(AudioManager.STREAM_MUSIC);

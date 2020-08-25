@@ -93,7 +93,7 @@ public class NmeaParser {
 			splitter.setString(sentence);
 			command = splitter.next();
 			if (GGA.matcher(command).matches()) {
-				if(!Sounds.gps_connected.isPlaying()){
+				if(Sounds.pulse_enabled && !Sounds.gps_connected.isPlaying()){
 					Sounds.pulse.start();
 				}
 				/* $GPGGA,123519,4807.038,N,01131.000,E,1,08,0.9,545.4,M,46.9,M,,*47
